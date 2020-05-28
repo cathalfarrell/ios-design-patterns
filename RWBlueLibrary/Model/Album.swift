@@ -48,6 +48,9 @@ extension Album: CustomStringConvertible {
   }
 }
 
+// MARK:- Decorator Pattern - Extensions/Delegates
+// So this Album struct is extended to make it easier to display in a table.
+
 typealias AlbumData = (title: String, value: String)
 
 extension Album {

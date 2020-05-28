@@ -62,6 +62,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
+
+  // MARK: - Momento Pattern
+  /*
+   The memento pattern captures and externalizes an object's internal state. In other words, it saves your stuff somewhere. Later on, this externalized state can be restored without violating encapsulation; that is, private data remains private.
+   */
   
   func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
     return true

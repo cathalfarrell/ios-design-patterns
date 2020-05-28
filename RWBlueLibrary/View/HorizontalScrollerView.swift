@@ -30,6 +30,11 @@
 
 import UIKit
 
+// MARK: - Adapter Pattern - uses protocols to define functionality
+/*
+ An Adapter allows classes with incompatible interfaces to work together. It wraps itself around an object and exposes a standard interface to interact with that object.
+ */
+
 protocol HorizontalScrollerViewDataSource: class {
   // Ask the data source how many views it wants to present inside the horizontal scroller
   func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int

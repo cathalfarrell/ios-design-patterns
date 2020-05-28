@@ -35,6 +35,8 @@ class AlbumView: UIView {
   
   private var coverImageView: UIImageView!
   private var indicatorView: UIActivityIndicatorView!
+
+    // MARK: - Observer Pattern - KVO Pattern
   private var valueObservation: NSKeyValueObservation!
   
   required init?(coder aDecoder: NSCoder) {

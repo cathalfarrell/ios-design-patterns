@@ -56,7 +56,11 @@ final class PersistencyManager {
   func deleteAlbum(at index: Int) {
     albums.remove(at: index)
   }
-  
+
+  // MARK: - Persisting the downloaded images
+
+  // To cache downloaded images
+
   private var cache: URL {
     return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
   }
@@ -81,9 +85,14 @@ final class PersistencyManager {
   private var documents: URL {
     return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
   }
+
+  // MARK:- Momento Pattern - Archiving with Codable
+
   private enum Filenames {
     static let Albums = "albums.json"
   }
+
+  //Encodes data to an internal JSON file
   func saveAlbums() {
     let url = documents.appendingPathComponent(Filenames.Albums)
     let encoder = JSONEncoder()

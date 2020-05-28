@@ -24,15 +24,22 @@ import Foundation
 import UIKit
 
 final class LibraryAPI {
-  // 1
+
+  // MARK: - Singleton Pattern
   static let shared = LibraryAPI()
   private let persistencyManager = PersistencyManager()
   private let httpClient = HTTPClient()
   private let isOnline = false
-  // 2
+
+
   private init() {
+    // MARK:- Observer Pattern
     NotificationCenter.default.addObserver(self, selector: #selector(downloadImage(with:)), name: .BLDownloadImage, object: nil)
   }
+
+  // MARK: - Facade Pattern - dont need to know how behind scenes
+  // e.g. could be network/persistance/database etc
+  // To manage retrieval, addition or deletion etc.
   
   func getAlbums() -> [Album] {
     return persistencyManager.getAlbums()
@@ -51,6 +58,8 @@ final class LibraryAPI {
       httpClient.postRequest("/api/deleteAlbum", body: "\(index)")
     }
   }
+
+  // MARK: - Downloading and caching images -> ImageViews
   
   @objc func downloadImage(with notification: Notification) {
     guard let userInfo = notification.userInfo,

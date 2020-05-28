@@ -48,10 +48,10 @@ final class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    //1
+    // MARK: - Facade Pattern - dont need to know it gets the albums how behind scenes
     allAlbums = LibraryAPI.shared.getAlbums()
     
-    //2
+    // MARK: - Decorator Design Pattern - using delegates/extensions etc
     tableView.dataSource = self
     horizontalScrollerView.dataSource = self
     horizontalScrollerView.delegate = self
@@ -81,6 +81,10 @@ final class ViewController: UIViewController {
   
 }
 
+// MARK: - Momento Pattern
+/*
+ The memento pattern captures and externalizes an object's internal state. In other words, it saves your stuff somewhere. Later on, this externalized state can be restored without violating encapsulation; that is, private data remains private.
+ */
 extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let albumData = currentAlbumData else {
