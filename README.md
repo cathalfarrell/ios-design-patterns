@@ -16,3 +16,5 @@ The Decorator Design Pattern - Extensions & Delegation
 The Adaptor Pattern - Using Protocals
 The Observer Pattern - Notifications and KVO
 The Momento Pattern for Archiving
+
+![Image description](https://cathalfarrell.com/repo-images/designPatterns.png)
