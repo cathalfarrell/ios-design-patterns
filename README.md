@@ -9,12 +9,12 @@ https://www.raywenderlich.com/476-design-patterns-on-ios-using-swift-part-2-2
 
 It takes a look at these patterns:
 
-MVC
-The Singleton
-The Facade Design Pattern - API that returns from local storage or network etc
-The Decorator Design Pattern - Extensions & Delegation
-The Adaptor Pattern - Using Protocals
-The Observer Pattern - Notifications and KVO
-The Momento Pattern for Archiving
+* MVC
+* The Singleton
+* The Facade Design Pattern - API that returns from local storage or network etc
+* The Decorator Design Pattern - Extensions & Delegation
+* The Adaptor Pattern - Using Protocals
+* The Observer Pattern - Notifications and KVO
+* The Momento Pattern for Archiving
 
 ![Image description](https://cathalfarrell.com/repo-images/designPatterns.png)
